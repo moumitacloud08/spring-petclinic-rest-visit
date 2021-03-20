@@ -1,5 +1,6 @@
 FROM frolvlad/alpine-oraclejre8:slim
 VOLUME /tmp
+COPY target/spring-petclinic-rest-visit-1.7.jar .
 ADD spring-petclinic-rest-visit-1.7.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENV JAVA_OPTS=""
